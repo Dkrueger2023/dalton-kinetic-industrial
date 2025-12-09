@@ -316,7 +316,7 @@ export default function Page() {
               },
               {
                 title: "Water/Waste/Municipal Pipeline",
-                image: "/water-waste-municipal-pipeline.jpg",
+                image: "/water-waste-municipal-pipeline.webp",
               },
             ].map((service, index) => (
               <div
