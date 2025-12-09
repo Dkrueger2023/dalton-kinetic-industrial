@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Wrench, Shield, Users, Phone, Mail, MapPin, Menu, X, Check } from "lucide-react"
 import { useState } from "react"
-import { ContactFormModal } from "@/components/contact-form-modal"
+import { ContactFormModal } from "@/components/ContactFormModal"
 
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -108,21 +108,37 @@ export default function Page() {
           <div className="container mx-auto px-4 py-6 flex items-center justify-between">
             <div className="flex items-center space-x-2 md:flex-none flex-1 justify-center md:justify-start">
               <a href="/" className="cursor-pointer">
-                <img src="/all-white-kinetic-logo.png" alt="Kinetic Industrial" className="h-24 w-auto" />
+                <img
+                  src="/all-white-kinetic-logo.png"
+                  alt="Kinetic Industrial"
+                  className="h-24 w-auto"
+                />
               </a>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-white hover:text-[#d81e1f] transition-colors">
+              <a
+                href="#services"
+                className="text-white hover:text-[#d81e1f] transition-colors"
+              >
                 Services
               </a>
-              <a href="#industries" className="text-white hover:text-[#d81e1f] transition-colors">
+              <a
+                href="#industries"
+                className="text-white hover:text-[#d81e1f] transition-colors"
+              >
                 Industries
               </a>
-              <a href="#about" className="text-white hover:text-[#d81e1f] transition-colors">
+              <a
+                href="#about"
+                className="text-white hover:text-[#d81e1f] transition-colors"
+              >
                 About
               </a>
-              <a href="#contact" className="text-white hover:text-[#d81e1f] transition-colors">
+              <a
+                href="#contact"
+                className="text-white hover:text-[#d81e1f] transition-colors"
+              >
                 Contact
               </a>
             </div>
@@ -134,7 +150,11 @@ export default function Page() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-white" />
+              ) : (
+                <Menu className="h-6 w-6 text-white" />
+              )}
             </button>
           </div>
 
@@ -188,8 +208,9 @@ export default function Page() {
                 className="text-lg md:text-xl text-white mb-8 text-pretty font-normal font-[var(--font-helvetica)]"
                 style={{ color: "#ffffff", opacity: 0.95 }}
               >
-                Kinetic Industrial empowers our clients in the most demanding industries by delivering premier
-                industrial services and tailored solutions.
+                Kinetic Industrial empowers our clients in the most demanding
+                industries by delivering premier industrial services and
+                tailored solutions.
               </p>
             </div>
 
@@ -217,8 +238,9 @@ export default function Page() {
               TRUSTED PARTNER IN INDUSTRIAL EXCELLENCE
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-pretty font-[var(--font-sans)]">
-              From oil & gas pipeline construction to testing services and beyond, we offer a wide range of solutions so
-              you can count on us for all your industrial needs.
+              From oil & gas pipeline construction to testing services and
+              beyond, we offer a wide range of solutions so you can count on us
+              for all your industrial needs.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
@@ -229,7 +251,8 @@ export default function Page() {
                   Safety First
                 </h3>
                 <p className="text-muted-foreground font-[var(--font-sans)]">
-                  Zero-incident safety record with comprehensive training and protocols
+                  Zero-incident safety record with comprehensive training and
+                  protocols
                 </p>
               </div>
               <div className="text-center">
@@ -240,7 +263,8 @@ export default function Page() {
                   Expert Execution
                 </h3>
                 <p className="text-muted-foreground font-[var(--font-sans)]">
-                  Skilled professionals delivering projects on time and within budget
+                  Skilled professionals delivering projects on time and within
+                  budget
                 </p>
               </div>
               <div className="text-center">
@@ -251,7 +275,8 @@ export default function Page() {
                   Trusted Partnership
                 </h3>
                 <p className="text-muted-foreground font-[var(--font-sans)]">
-                  Long-term relationships built on reliability and exceptional service
+                  Long-term relationships built on reliability and exceptional
+                  service
                 </p>
               </div>
             </div>
@@ -263,7 +288,9 @@ export default function Page() {
       <section id="services" className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-white mb-4 font-[var(--font-impact)]">OUR SERVICES</h2>
+            <h2 className="text-4xl font-black text-white mb-4 font-[var(--font-impact)]">
+              OUR SERVICES
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -306,16 +333,20 @@ export default function Page() {
                 className="group cursor-pointer h-80"
                 onClick={() => {
                   if (flippedCards.includes(index)) {
-                    setFlippedCards(flippedCards.filter((cardIndex) => cardIndex !== index))
+                    setFlippedCards(
+                      flippedCards.filter((cardIndex) => cardIndex !== index)
+                    );
                   } else {
-                    setFlippedCards([...flippedCards, index])
+                    setFlippedCards([...flippedCards, index]);
                   }
                 }}
               >
                 <div className="relative w-full h-full [perspective:1000px]">
                   <div
                     className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
-                      flippedCards.includes(index) ? "[transform:rotateY(180deg)]" : ""
+                      flippedCards.includes(index)
+                        ? "[transform:rotateY(180deg)]"
+                        : ""
                     }`}
                   >
                     <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-lg overflow-hidden relative">
@@ -340,7 +371,9 @@ export default function Page() {
                         {service.title}
                       </h3>
                       <ul className="font-[var(--font-helvetica)] text-sm space-y-2 flex-1 grid grid-cols-2 gap-x-4 gap-y-2">
-                        {serviceDetails[service.title as keyof typeof serviceDetails]?.map((detail, detailIndex) => (
+                        {serviceDetails[
+                          service.title as keyof typeof serviceDetails
+                        ]?.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start">
                             <Check className="mr-2 flex-shrink-0 !text-[#d81e1f] h-4 w-4 mt-0.5" />
                             <span className="!text-[#ffffff]">{detail}</span>
@@ -360,10 +393,13 @@ export default function Page() {
       <section id="industries" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-foreground mb-4 font-[var(--font-impact)]">INDUSTRIES</h2>
+            <h2 className="text-4xl font-black text-foreground mb-4 font-[var(--font-impact)]">
+              INDUSTRIES
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty font-[var(--font-sans)]">
-              We serve diverse industries with specialized expertise and solutions tailored to meet unique operational
-              requirements and regulatory standards.
+              We serve diverse industries with specialized expertise and
+              solutions tailored to meet unique operational requirements and
+              regulatory standards.
             </p>
           </div>
 
@@ -396,10 +432,14 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-              <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">OUR GEOGRAPHICAL REACH</h2>
+              <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">
+                OUR GEOGRAPHICAL REACH
+              </h2>
               <p className="text-lg text-white/90 mb-8 text-pretty font-[var(--font-sans)]">
-                Our operations are managed from three central Oklahoma locations—yards in Woodward, OK and Amber, OK,
-                and our HQ in Norman, OK. This positioning allows us to effectively serve the entire region, including:
+                Our operations are managed from three central Oklahoma
+                locations—yards in Woodward, OK and Amber, OK, and our HQ in
+                Norman, OK. This positioning allows us to effectively serve the
+                entire region, including:
               </p>
               <ul className="grid grid-cols-2 lg:flex lg:flex-col gap-3 text-white font-[var(--font-sans)] lg:items-start">
                 <li className="flex items-center justify-start lg:justify-start">
@@ -451,53 +491,84 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/kinetic-industrial-logo.png" alt="Kinetic Industrial" className="h-18 w-auto" />
+                <img
+                  src="/kinetic-industrial-logo.png"
+                  alt="Kinetic Industrial"
+                  className="h-18 w-auto"
+                />
               </div>
               <p className="text-gray-600 mb-4 text-pretty font-[var(--font-sans)]">
-                Built on Integrity, defined by Quality, driven by Commitment. Moving industry Forever Forward.
+                Built on Integrity, defined by Quality, driven by Commitment.
+                Moving industry Forever Forward.
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">Services</h3>
+              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">
+                Services
+              </h3>
               <ul className="space-y-2 text-gray-600 font-[var(--font-sans)]">
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Oil & Gas Pipeline Construction
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Coatings
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Shop Fabrications
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Land Services
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Access
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Pigging Services & Support
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Testing Services
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Water/Waste/Municipal Pipeline
                   </a>
                 </li>
@@ -505,25 +576,39 @@ export default function Page() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">Industries</h3>
+              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">
+                Industries
+              </h3>
               <ul className="space-y-2 text-gray-600 font-[var(--font-sans)]">
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Oil/Gas midstream
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Electrical transmission/High voltage
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Water/Waste Water
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     Power Generation/Plant Services
                   </a>
                 </li>
@@ -531,7 +616,9 @@ export default function Page() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">Contact Us</h3>
+              <h3 className="text-lg font-semibold mb-4 font-[var(--font-helvetica)] text-black">
+                Contact Us
+              </h3>
               <div className="space-y-3 text-gray-600 font-[var(--font-sans)]">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-[#d81e1f]" />
@@ -539,7 +626,10 @@ export default function Page() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-[#d81e1f]" />
-                  <a href="mailto:info@kineticind.com" className="hover:text-[#d81e1f] transition-colors">
+                  <a
+                    href="mailto:info@kineticind.com"
+                    className="hover:text-[#d81e1f] transition-colors"
+                  >
                     info@kineticind.com
                   </a>
                 </div>
@@ -549,16 +639,20 @@ export default function Page() {
                 </div>
               </div>
               <a href="tel:580-744-0881">
-                <Button className="mt-4 bg-[#d81e1f] text-white hover:bg-[#b91c1c]">Contact Us Today</Button>
+                <Button className="mt-4 bg-[#d81e1f] text-white hover:bg-[#b91c1c]">
+                  Contact Us Today
+                </Button>
               </a>
             </div>
           </div>
 
           <div className="border-t border-gray-300 mt-12 pt-8 text-center text-gray-500">
-            <p className="font-[var(--font-sans)]">&copy; 2025 Kinetic Industrial. All rights reserved.</p>
+            <p className="font-[var(--font-sans)]">
+              &copy; 2025 Kinetic Industrial. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
