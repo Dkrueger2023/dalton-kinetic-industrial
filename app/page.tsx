@@ -193,7 +193,7 @@ export default function Page() {
         {/* Hero Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex-1 flex items-center">
           <div className="flex w-full h-auto">
-            <div className="flex-1 bg-black/40 p-8 md:p-12 border-l-8 border-[#d81e1f]">
+            <div className="flex items-center flex-1 bg-black/40 p-8 md:p-12 border-l-8 border-[#d81e1f]">
               <h1
                 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 text-balance uppercase tracking-wide font-[var(--font-impact)]"
                 style={{ color: "#ffffff" }}
@@ -204,27 +204,18 @@ export default function Page() {
                 <br />
                 COMMITMENT.
               </h1>
-              <p
-                className="text-lg md:text-xl text-white mb-8 text-pretty font-normal font-[var(--font-helvetica)]"
-                style={{ color: "#ffffff", opacity: 0.95 }}
-              >
-                Kinetic Industrial empowers our clients in the most demanding
-                industries by delivering premier industrial services and
-                tailored solutions.
-              </p>
             </div>
 
-            <div className="flex-1 bg-black/40 p-8 md:p-12 border-l-2 border-[#d81e1f] hidden lg:block">
-              <ul className="space-y-4 text-white font-[var(--font-helvetica)] text-lg font-bold uppercase tracking-wide">
-                <li>OIL & GAS PIPELINE CONSTRUCTION</li>
-                <li>COATINGS</li>
-                <li>SHOP FABRICATIONS</li>
-                <li>LAND SERVICES</li>
-                <li>ACCESS</li>
-                <li>PIGGING SERVICES & SUPPORT</li>
-                <li>TESTING SERVICES</li>
-                <li>WATER/WASTE/MUNICIPAL PIPELINE</li>
-              </ul>
+            <div className="text-white flex-1 bg-black/40 p-8 md:p-12 border-l-2 border-[#d81e1f] hidden lg:block">
+              <p className="space-y-4 text-white font-[var(--font-helvetica)] text-lg  tracking-wide">
+                Kinetic Industrial is a top tier industrial contractor offering
+                specialized construction services to a broad range of energy,
+                infrastructure, utility, and power generation customers. We
+                deliver reliable industrial infrastructure solutions across the
+                United States, specializing in oil & gas, electrical, water and
+                other critical systems to support the nation's most essential
+                systems.
+              </p>
             </div>
           </div>
         </div>
