@@ -316,7 +316,7 @@ export default function Page() {
               },
               {
                 title: "Water/Waste/Municipal Pipeline",
-                image: "/water-waste-municipal-pipeline.webp",
+                image: "/water-waste-municipal-pipeline.jpg",
               },
             ].map((service, index) => (
               <div
@@ -432,42 +432,74 @@ export default function Page() {
                 Norman, OK. This positioning allows us to effectively serve the
                 entire region, including:
               </p>
-              <ul className="grid grid-cols-2 lg:flex lg:flex-col gap-3 text-white font-[var(--font-sans)] lg:items-start">
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Texas</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">New Mexico</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Colorado</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Kansas</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Missouri</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Arkansas</span>
-                </li>
-                <li className="flex items-center justify-start lg:justify-start">
-                  <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
-                  <span className="text-lg">Louisiana</span>
-                </li>
-              </ul>
+              <div className="flex flex-row gap-8">
+                <ul className="text-white font-[var(--font-sans)] lg:items-start">
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Texas</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">New Mexico</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Colorado</span>
+                  </li>
+                   <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Kansas</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Missouri</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Montana</span>
+                  </li>
+                   <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">North Dakota</span>
+                  </li>
+                </ul>
+                <ul className="text-white font-[var(--font-sans)] lg:items-start">
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Oklahoma</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">South Dakota</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Minnesota</span>
+                  </li>
+                   <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Wyoming</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Nebraska</span>
+                  </li>
+                  <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Arkansas</span>
+                  </li>
+                   <li className="flex items-center justify-start lg:justify-start">
+                    <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0"></div>
+                    <span className="text-lg">Louisiana</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Map Image */}
             <div className="order-1 lg:order-2">
               <img
-                src="/images/reach-20-281-29-20-281-29.webp"
+                src="/images/reach-updated.webp"
                 alt="Kinetic Industrial Service Area Map showing Oklahoma, Texas, New Mexico, Colorado, Kansas, Missouri, Arkansas, and Louisiana"
                 className="w-full h-auto rounded-lg"
               />
