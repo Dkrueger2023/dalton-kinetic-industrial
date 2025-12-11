@@ -278,7 +278,7 @@ export default function Page() {
               },
               {
                 title: "Civil",
-                image: "/coatings.avif",
+                image: "/testing-services.avif",
               },
               {
                 title: "ROW",
@@ -294,7 +294,7 @@ export default function Page() {
               },
               {
                 title: "Coatings",
-                image: "/testing-services.avif",
+                image: "/coatings.avif",
               },
             ].map((service, index) => (
               <div
