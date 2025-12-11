@@ -11,22 +11,15 @@ export default function Page() {
   const [flippedCards, setFlippedCards] = useState<number[]>([])
 
   const serviceDetails = {
-    "Oil & Gas Pipeline Construction": [
-      "Installation",
-      "ROW",
-      "Trenching",
-      "Boring",
-      "Fabrication",
-      "Stations",
-      "Infrastructure",
-      "Processing",
-      "Integrity",
-      "Testing",
+    "Pipeline Construction": [
+      "Well-Connects",
       "Maintenance",
-      "Decommissioning",
+      "Integrity Digs",
+      "HDD’s",
+      "Emergency Leak Repair",
+      "Cleanup/Remediation"
     ],
-    Coatings: ["Shop or field applied coatings with NACE certified professional oversight"],
-    "Shop Fabrications": [
+    "Facilities": [
       "Fabricated assemblies",
       "Piping",
       "Launcher/receiver",
@@ -36,50 +29,39 @@ export default function Page() {
       "Gates",
       "Custom fits",
     ],
-    "Land Services": [
-      "Clearing",
-      "Grading",
-      "Erosion control devices",
-      "Erosion repair",
-      "Restoration services",
-      "Re-seeding",
-      "Reclamation",
+    "Civil": [
+      "Pad Construction",
+      "Site Foundations",
+      "Turnkey Facility Underground",
+      "Large Scale Retention/Detention"
     ],
-    Access: [
-      "Temporary fencing",
-      "Site storage solutions",
-      "Temporary housing",
-      "ROW access/maintenance",
-      "Lease road construction and maintenance",
-      "Matting",
+    "ROW": [
+      "Maintenance",
       "Mowing",
+      "Brush Hogging/Mulching",
+      "Access/Fencing",
+      "Washouts",
+      "Reseeding"
     ],
-    "Pigging Services & Support": [
-      "Cleaning",
-      "Batching",
-      "Corrosion",
-      "Cracking",
-      "Mapping",
-      "Operations",
+    "Fabrication": [
+      "Shop-Built Piping Assemblies",
+      "Traps",
+      "Valves",
+      "Misc. Custom Fabrication",
+      "Catwalks/Platforms"
+    ],
+    "Technical Services": [
+      "Pigging Support/Pigging",
+      "Hydrotesting",
       "Tracking",
+      "Survey/DCVG",
+      "Asbestos Removal"
     ],
-    "Testing Services": ["Piping and fabrication hydrotesting in shop or field setting"],
-    "Water/Waste/Municipal Pipeline": [
-      "Mains",
-      "Lines",
-      "Hydrants",
-      "Meters",
-      "Sewer",
-      "Forcemains",
-      "Manholes",
-      "Stations",
-      "Stormwater",
-      "Inlets",
-      "Rehab",
-      "Repair",
-      "Leaks",
-      "Cleaning",
-    ],
+    "Coatings": [
+      "Blasting/Coating",
+      "Final Painted Assemblies",
+      "Galvanizing"
+    ]
   }
 
   const scrollToSection = (sectionId: string) => {
