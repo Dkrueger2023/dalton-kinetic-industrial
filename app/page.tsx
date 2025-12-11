@@ -269,36 +269,32 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Oil & Gas Pipeline Construction",
+                title: "Pipeline Construction",
                 image: "/oil_gas_pipeline.webp",
               },
               {
-                title: "Coatings",
-                image: "/coatings.avif",
-              },
-              {
-                title: "Shop Fabrications",
+                title: "Facilities",
                 image: "/shop-fabrications.avif",
               },
               {
-                title: "Land Services",
+                title: "Civil",
+                image: "/coatings.avif",
+              },
+              {
+                title: "ROW",
                 image: "/land-clearing.avif",
               },
               {
-                title: "Access",
+                title: "Fabrication",
                 image: "/row-maintenance.avif",
               },
               {
-                title: "Pigging Services & Support",
+                title: "Technical Services",
                 image: "/pigging-pipeline.png",
               },
               {
-                title: "Testing Services",
+                title: "Coatings",
                 image: "/testing-services.avif",
-              },
-              {
-                title: "Water/Waste/Municipal Pipeline",
-                image: "/water-waste-municipal-pipeline.jpg",
               },
             ].map((service, index) => (
               <div
