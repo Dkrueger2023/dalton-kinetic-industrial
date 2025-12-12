@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Leading industrial services company providing comprehensive solutions across multiple sectors with a focus on safety, quality, and execution.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 }
 
