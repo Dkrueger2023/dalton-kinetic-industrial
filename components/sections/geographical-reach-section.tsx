@@ -6,7 +6,7 @@ function StateListItem({ state }: { state: string }) {
   return (
     <li className="flex items-center justify-start lg:justify-start">
       <div className="w-2 h-2 bg-[#d81e1f] rounded-full mr-4 flex-shrink-0" />
-      <span className="text-lg">{state}</span>
+      <span className="text-sm md:text-base lg:text-lg">{state}</span>
     </li>
   )
 }
@@ -18,7 +18,7 @@ export function GeographicalReachSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">OUR GEOGRAPHICAL REACH</h2>
+            <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">GEOGRAPHICAL REACH</h2>
             <p className="text-lg text-white/90 mb-8 text-pretty font-[var(--font-sans)]">
               Our operations are managed from three central Oklahoma locations—yards in Woodward, OK and Amber, OK, and
               our HQ in Norman, OK. This positioning allows us to effectively serve the entire region, including:
