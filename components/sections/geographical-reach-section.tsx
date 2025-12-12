@@ -23,7 +23,7 @@ export function GeographicalReachSection() {
               Our operations are managed from three central Oklahoma locations—yards in Woodward, OK and Amber, OK, and
               our HQ in Norman, OK. This positioning allows us to effectively serve the entire region, including:
             </p>
-            <div className="flex flex-row gap-16">
+            <div className="flex flex-row gap-24">
               <ul className="text-white font-[var(--font-sans)] lg:items-start">
                 {statesColumn1.map((state) => (
                   <StateListItem key={state} state={state} />

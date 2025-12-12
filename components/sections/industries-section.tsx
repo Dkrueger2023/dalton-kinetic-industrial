@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge"
 import { Factory, Zap, Droplets, Power } from "lucide-react"
 
 const industries = [
@@ -31,9 +30,10 @@ export function IndustriesSection() {
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">Sectors We Serve</h2>
-          <p className="mt-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">INDUSTRIES</p>
+          <p className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground">INDUSTRIES</p>
           <p className="mt-4 text-lg text-muted-foreground">
-            We provide specialized expertise tailored to your industry, ensuring your distinct operational needs and regulatory standards are met with precision.
+            We provide specialized expertise tailored to your industry, ensuring your distinct operational needs and
+            regulatory standards are met with precision.
           </p>
         </div>
 
