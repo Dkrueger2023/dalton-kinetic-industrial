@@ -43,7 +43,7 @@ export function IndustriesSection() {
               key={industry.title}
               className="group flex flex-col items-center rounded-lg border border-border bg-card p-8 text-center transition-all duration-300 hover:border-primary hover:shadow-lg"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-black transition-colors group-hover:bg-black">
                 <industry.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="mt-6 font-semibold text-card-foreground">{industry.title}</h3>

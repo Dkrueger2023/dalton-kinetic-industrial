@@ -9,7 +9,8 @@ const features = [
   {
     icon: Wrench,
     title: "Execution",
-    description: "Field first mentality from executive leadership ensures tight deadlines are met while quality and efficiency are maintained",
+    description:
+      "Field first mentality from executive leadership ensures tight deadlines are met while quality and efficiency are maintained",
   },
   {
     icon: Users,
@@ -33,7 +34,7 @@ export function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
-                <div className="w-16 h-16 bg-[#d81e1f]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-[#d81e1f]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2 font-[var(--font-helvetica)]">
