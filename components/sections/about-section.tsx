@@ -21,7 +21,7 @@ const features = [
 export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-black text-foreground mb-6 font-[var(--font-impact)]">
             TRUSTED PARTNER IN INDUSTRIAL EXCELLENCE

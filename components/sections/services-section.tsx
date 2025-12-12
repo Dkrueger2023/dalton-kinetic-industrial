@@ -48,7 +48,7 @@ export function ServicesSection() {
 
   return (
     <section id="services" className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-black text-white mb-4 font-[var(--font-impact)]">OUR SERVICES</h2>
         </div>

@@ -14,7 +14,7 @@ function StateListItem({ state }: { state: string }) {
 export function GeographicalReachSection() {
   return (
     <section className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">

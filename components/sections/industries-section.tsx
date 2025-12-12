@@ -26,7 +26,7 @@ const industries = [
 export function IndustriesSection() {
   return (
     <section id="industries" className="bg-background py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">Sectors We Serve</h2>

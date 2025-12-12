@@ -16,7 +16,7 @@ export function HeroSection() {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex-1 flex items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-center">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           {/* LEFT ELEMENT */}
           <div className="w-full lg:w-[60%] flex items-center bg-black/40 p-8 md:p-12 lg:border-l-8 border-[#d81e1f]">

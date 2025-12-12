@@ -24,7 +24,7 @@ export function Navbar() {
 
   return (
     <nav className="relative w-full z-50 bg-transparent border-b border-white/20">
-      <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-8 py-6 flex items-center justify-between">
         <div className="flex items-center space-x-2 md:flex-none flex-1 justify-center md:justify-start">
           <a href="/" className="cursor-pointer">
             <img src="/all-white-kinetic-logo.png" alt="Kinetic Industrial" className="h-24 w-auto" />
@@ -52,7 +52,7 @@ export function Navbar() {
 
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-sm border-b border-white/20">
-          <div className="container mx-auto px-4 py-6 space-y-4">
+          <div className="container mx-auto px-6 lg:px-8 py-6 space-y-4">
             {navLinks.map((link) => (
               <button
                 key={link.href}
