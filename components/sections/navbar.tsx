@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-6 flex items-center justify-between">
         <div className="flex items-center space-x-2 md:flex-none flex-1 justify-center md:justify-start">
           <a href="/" className="cursor-pointer">
-            <img src="/all-white-kinetic-logo.png" alt="Kinetic Industrial" className="h-24 w-auto" />
+            <img src="/all-white-kinetic-logo.webp" alt="Kinetic Industrial" className="h-24 w-auto" />
           </a>
         </div>
 

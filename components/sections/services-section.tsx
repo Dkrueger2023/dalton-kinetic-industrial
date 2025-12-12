@@ -7,9 +7,9 @@ const services = [
   { title: "Pipeline Construction", image: "/oil_gas_pipeline.webp" },
   { title: "Facilities", image: "/facility.webp" },
   { title: "Civil", image: "/dirt-work.webp" },
-  { title: "ROW", image: "/land-clearing.avif" },
+  { title: "ROW", image: "/land-clearing.webp" },
   { title: "Fabrication", image: "/fabrication.webp" },
-  { title: "Technical Services", image: "/pigging-pipeline.png" },
+  { title: "Technical Services", image: "/pigging-pipeline.webp" },
 ]
 
 const serviceDetails: Record<string, string[]> = {
