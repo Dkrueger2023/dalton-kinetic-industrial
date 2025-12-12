@@ -11,7 +11,7 @@
   --card-foreground: oklch(0.2 0 0); /* Charcoal Gray */
   --popover: oklch(1 0 0); /* White */
   --popover-foreground: oklch(0.2 0 0); /* Charcoal Gray */
-  --primary: oklch(0.55 0.22 25); /* Bright Red #d81e1f */
+  --primary: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --primary-foreground: oklch(1 0 0); /* White */
   --secondary: oklch(0.2 0 0); /* Charcoal Gray */
   --secondary-foreground: oklch(1 0 0); /* White */
@@ -19,12 +19,12 @@
   --muted-foreground: oklch(0.2 0 0); /* Charcoal Gray */
   --accent: oklch(0.85 0.15 85); /* Gold/Yellow #FFD700 */
   --accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
-  --destructive: oklch(0.6 0.2 25); /* Red for destructive actions */
+  --destructive: oklch(0.56 0.23 27); /* Red #E21D1D for destructive actions */
   --destructive-foreground: oklch(1 0 0); /* White */
   --border: oklch(0.88 0 0); /* Light Border #E0E0E0 */
   --input: oklch(1 0 0); /* White */
   --ring: oklch(0.85 0.15 85); /* Gold focus ring */
-  --chart-1: oklch(0.55 0.22 25); /* Bright Red */
+  --chart-1: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --chart-2: oklch(0.85 0.15 85); /* Gold */
   --chart-3: oklch(0.2 0 0); /* Charcoal Gray */
   --chart-4: oklch(0.98 0 0); /* Light Gray */
@@ -32,7 +32,7 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.2 0 0); /* Charcoal Gray */
   --sidebar-foreground: oklch(1 0 0); /* White */
-  --sidebar-primary: oklch(0.55 0.22 25); /* Bright Red */
+  --sidebar-primary: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --sidebar-primary-foreground: oklch(1 0 0); /* White */
   --sidebar-accent: oklch(0.85 0.15 85); /* Gold */
   --sidebar-accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
@@ -48,7 +48,7 @@
   --card-foreground: oklch(1 0 0); /* White */
   --popover: oklch(0.2 0 0); /* Charcoal Gray */
   --popover-foreground: oklch(1 0 0); /* White */
-  --primary: oklch(0.55 0.22 25); /* Bright Red #d81e1f */
+  --primary: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --primary-foreground: oklch(1 0 0); /* White */
   --secondary: oklch(0.3 0 0); /* Lighter charcoal */
   --secondary-foreground: oklch(1 0 0); /* White */
@@ -56,19 +56,19 @@
   --muted-foreground: oklch(0.7 0 0); /* Light gray text */
   --accent: oklch(0.85 0.15 85); /* Gold */
   --accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
-  --destructive: oklch(0.5 0.2 25); /* Darker red */
+  --destructive: oklch(0.56 0.23 27); /* Red #E21D1D */
   --destructive-foreground: oklch(1 0 0); /* White */
   --border: oklch(0.3 0 0); /* Dark border */
   --input: oklch(0.25 0 0); /* Dark input */
   --ring: oklch(0.85 0.15 85); /* Gold focus ring */
-  --chart-1: oklch(0.55 0.22 25); /* Bright Red */
+  --chart-1: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --chart-2: oklch(0.85 0.15 85); /* Gold */
   --chart-3: oklch(0.7 0 0); /* Light gray */
   --chart-4: oklch(0.3 0 0); /* Dark gray */
   --chart-5: oklch(0.4 0 0); /* Medium gray */
   --sidebar: oklch(0.15 0 0); /* Darker sidebar */
   --sidebar-foreground: oklch(1 0 0); /* White */
-  --sidebar-primary: oklch(0.55 0.22 25); /* Bright Red */
+  --sidebar-primary: oklch(0.56 0.23 27); /* Bright Red #E21D1D */
   --sidebar-primary-foreground: oklch(1 0 0); /* White */
   --sidebar-accent: oklch(0.85 0.15 85); /* Gold */
   --sidebar-accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
@@ -152,7 +152,7 @@
   }
 
   .flip-card-back .bullet-point {
-    color: #d81e1f !important;
+    color: #e21d1d !important;
   }
 
   /* Ensure proper contrast for all flip card back elements */
@@ -168,6 +168,6 @@
   }
 
   [data-flip-card-back="true"] .bullet-point {
-    color: #d81e1f !important;
+    color: #e21d1d !important;
   }
 }

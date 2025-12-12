@@ -5,12 +5,11 @@ import { Check } from "lucide-react"
 
 const services = [
   { title: "Pipeline Construction", image: "/oil_gas_pipeline.webp" },
-  { title: "Facilities", image: "/shop-fabrications.avif" },
-  { title: "Civil", image: "/testing-services.avif" },
+  { title: "Facilities", image: "/facility.webp" },
+  { title: "Civil", image: "/dirt-work.webp" },
   { title: "ROW", image: "/land-clearing.avif" },
-  { title: "Fabrication", image: "/row-maintenance.avif" },
+  { title: "Fabrication", image: "/fabrication.webp" },
   { title: "Technical Services", image: "/pigging-pipeline.png" },
-  { title: "Coatings", image: "/coatings.avif" },
 ]
 
 const serviceDetails: Record<string, string[]> = {
@@ -36,7 +35,6 @@ const serviceDetails: Record<string, string[]> = {
   ROW: ["Maintenance", "Mowing", "Brush Hogging/Mulching", "Access/Fencing", "Washouts", "Reseeding"],
   Fabrication: ["Shop-Built Piping Assemblies", "Traps", "Valves", "Misc. Custom Fabrication", "Catwalks/Platforms"],
   "Technical Services": ["Pigging Support/Pigging", "Hydrotesting", "Tracking", "Survey/DCVG", "Asbestos Removal"],
-  Coatings: ["Blasting/Coating", "Final Painted Assemblies", "Galvanizing"],
 }
 
 export function ServicesSection() {

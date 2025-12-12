@@ -38,7 +38,7 @@ export function HeroSection() {
 
           {/* RIGHT ELEMENT */}
           <div className="w-full lg:w-[40%] bg-black/40 p-8 md:p-12 lg:border-l-2 border-[#d81e1f] text-white">
-            <p className="space-y-4 text-white font-[var(--font-helvetica)] text-lg tracking-wide">
+            <p className="text-justify text-center space-y-4 text-white font-[var(--font-helvetica)] text-lg tracking-wide leading-relaxed">
               Kinetic Industrial is a top tier industrial contractor offering specialized construction services to a
               broad range of energy, infrastructure, utility, and power generation customers. We deliver reliable
               industrial infrastructure solutions across the United States, specializing in oil & gas, electrical, water

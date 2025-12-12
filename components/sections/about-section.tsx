@@ -3,18 +3,18 @@ import { Shield, Wrench, Users } from "lucide-react"
 const features = [
   {
     icon: Shield,
-    title: "Safety First",
-    description: "Zero-incident safety record with comprehensive training and protocols",
+    title: "Safety",
+    description: "Field-focused leadership ensures top-down safety culture",
   },
   {
     icon: Wrench,
-    title: "Expert Execution",
-    description: "Skilled professionals delivering projects on time and within budget",
+    title: "Execution",
+    description: "Field first mentality from executive leadership ensures tight deadlines are met while quality and efficiency are maintained",
   },
   {
     icon: Users,
     title: "Trusted Partnership",
-    description: "Long-term relationships built on reliability and exceptional service",
+    description: "Deep-rooted customer relationships based on years of exceptional service",
   },
 ]
 

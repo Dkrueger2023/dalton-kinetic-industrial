@@ -1,8 +1,8 @@
-import { Factory, Zap, Droplets, Power } from "lucide-react"
+import { Factory, Zap, Droplets, Workflow } from "lucide-react"
 
 const industries = [
   {
-    icon: Factory,
+    icon: Workflow,
     title: "Oil/Gas midstream",
     description: "Pipeline construction and maintenance for energy transportation",
   },
@@ -17,7 +17,7 @@ const industries = [
     description: "Municipal and industrial water system solutions",
   },
   {
-    icon: Power,
+    icon: Factory,
     title: "Power Generation/Plant Services",
     description: "Facility construction and maintenance services",
   },
@@ -29,8 +29,7 @@ export function IndustriesSection() {
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">Sectors We Serve</h2>
-          <p className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground">INDUSTRIES</p>
+          <p className="text-balance text-4xl font-bold tracking-tight text-foreground">INDUSTRIES</p>
           <p className="mt-4 text-lg text-muted-foreground">
             We provide specialized expertise tailored to your industry, ensuring your distinct operational needs and
             regulatory standards are met with precision.
