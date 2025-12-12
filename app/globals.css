@@ -11,7 +11,7 @@
   --card-foreground: oklch(0.2 0 0); /* Charcoal Gray */
   --popover: oklch(1 0 0); /* White */
   --popover-foreground: oklch(0.2 0 0); /* Charcoal Gray */
-  --primary: oklch(0.4 0.15 15); /* Crimson Red #9B1B30 */
+  --primary: oklch(0.55 0.22 25); /* Bright Red #d81e1f */
   --primary-foreground: oklch(1 0 0); /* White */
   --secondary: oklch(0.2 0 0); /* Charcoal Gray */
   --secondary-foreground: oklch(1 0 0); /* White */
@@ -24,7 +24,7 @@
   --border: oklch(0.88 0 0); /* Light Border #E0E0E0 */
   --input: oklch(1 0 0); /* White */
   --ring: oklch(0.85 0.15 85); /* Gold focus ring */
-  --chart-1: oklch(0.4 0.15 15); /* Crimson Red */
+  --chart-1: oklch(0.55 0.22 25); /* Bright Red */
   --chart-2: oklch(0.85 0.15 85); /* Gold */
   --chart-3: oklch(0.2 0 0); /* Charcoal Gray */
   --chart-4: oklch(0.98 0 0); /* Light Gray */
@@ -32,7 +32,7 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.2 0 0); /* Charcoal Gray */
   --sidebar-foreground: oklch(1 0 0); /* White */
-  --sidebar-primary: oklch(0.4 0.15 15); /* Crimson Red */
+  --sidebar-primary: oklch(0.55 0.22 25); /* Bright Red */
   --sidebar-primary-foreground: oklch(1 0 0); /* White */
   --sidebar-accent: oklch(0.85 0.15 85); /* Gold */
   --sidebar-accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
@@ -48,7 +48,7 @@
   --card-foreground: oklch(1 0 0); /* White */
   --popover: oklch(0.2 0 0); /* Charcoal Gray */
   --popover-foreground: oklch(1 0 0); /* White */
-  --primary: oklch(0.4 0.15 15); /* Crimson Red */
+  --primary: oklch(0.55 0.22 25); /* Bright Red #d81e1f */
   --primary-foreground: oklch(1 0 0); /* White */
   --secondary: oklch(0.3 0 0); /* Lighter charcoal */
   --secondary-foreground: oklch(1 0 0); /* White */
@@ -61,14 +61,14 @@
   --border: oklch(0.3 0 0); /* Dark border */
   --input: oklch(0.25 0 0); /* Dark input */
   --ring: oklch(0.85 0.15 85); /* Gold focus ring */
-  --chart-1: oklch(0.4 0.15 15); /* Crimson Red */
+  --chart-1: oklch(0.55 0.22 25); /* Bright Red */
   --chart-2: oklch(0.85 0.15 85); /* Gold */
   --chart-3: oklch(0.7 0 0); /* Light gray */
   --chart-4: oklch(0.3 0 0); /* Dark gray */
   --chart-5: oklch(0.4 0 0); /* Medium gray */
   --sidebar: oklch(0.15 0 0); /* Darker sidebar */
   --sidebar-foreground: oklch(1 0 0); /* White */
-  --sidebar-primary: oklch(0.4 0.15 15); /* Crimson Red */
+  --sidebar-primary: oklch(0.55 0.22 25); /* Bright Red */
   --sidebar-primary-foreground: oklch(1 0 0); /* White */
   --sidebar-accent: oklch(0.85 0.15 85); /* Gold */
   --sidebar-accent-foreground: oklch(0.2 0 0); /* Charcoal Gray */
