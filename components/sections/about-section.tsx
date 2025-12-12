@@ -27,10 +27,6 @@ export function AboutSection() {
           <h2 className="text-4xl font-black text-foreground mb-6 font-[var(--font-impact)]">
             TRUSTED PARTNER IN INDUSTRIAL EXCELLENCE
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 text-pretty font-[var(--font-sans)]">
-            From oil & gas pipeline construction to testing services and beyond, we offer a wide range of solutions so
-            you can count on us for all your industrial needs.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
