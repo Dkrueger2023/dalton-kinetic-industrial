@@ -5,9 +5,9 @@ import { Check } from "lucide-react"
 
 const services = [
   { title: "Pipeline Construction", image: "/oil_gas_pipeline.webp" },
-  { title: "Facilities", image: "/facility.webp" },
+  { title: "Facilities", image: "/facilities.webp" }, // Updated FACILITIES image path to use new facilities.webp file
   { title: "Civil", image: "/dirt-work.webp" },
-  { title: "ROW", image: "/land-clearing.webp" },
+  { title: "ROW", image: "/row-access.webp" }, // Updated ROW image to use new row-access.webp file showing cleared utility corridor with access path
   { title: "Fabrication", image: "/fabrication.webp" },
   { title: "Technical Services", image: "/pigging-pipeline.webp" },
 ]
