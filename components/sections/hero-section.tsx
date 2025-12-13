@@ -5,8 +5,8 @@ export function HeroSection() {
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background Image */}
       <img
-        src="/heroimage-kinetic.webp"
-        alt="Pipeline Fusion Equipment"
+        src="/hero-image-kinetic.webp"
+        alt="Pipeline Construction Site"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
