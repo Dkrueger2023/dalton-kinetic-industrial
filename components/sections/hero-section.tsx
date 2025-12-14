@@ -7,7 +7,7 @@ export function HeroSection() {
       <img
         src="/hero-image-kinetic.webp"
         alt="Pipeline Construction Site"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-left md:object-center"
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/30" />
