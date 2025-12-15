@@ -1,5 +1,6 @@
 "use client"
 import { ContactFormModal } from "@/components/ContactFormModal"
+import Image from "next/image"
 
 export function Navbar() {
   return (
@@ -11,7 +12,16 @@ export function Navbar() {
           </a>
         </div>
 
-        <ContactFormModal />
+        <div className="flex items-center gap-4">
+          <ContactFormModal />
+          <Image
+            src="/american-flag.webp"
+            alt="American Flag"
+            width={60}
+            height={40}
+            className="h-10 w-auto object-contain"
+          />
+        </div>
       </div>
     </nav>
   )

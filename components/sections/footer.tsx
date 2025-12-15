@@ -25,8 +25,16 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border mb-8" />
 
-        {/* Copyright */}
-        <div className="text-center text-sm text-muted-foreground">© 2025 Kinetic Industrial. All rights reserved.</div>
+        <div className="flex justify-center items-center gap-2 text-center text-sm text-muted-foreground">
+          <span>© 2025 Kinetic Industrial. All rights reserved.</span>
+          <Image
+            src="/american-flag.webp"
+            alt="American Flag"
+            width={36}
+            height={24}
+            className="h-6 w-auto object-contain"
+          />
+        </div>
       </div>
     </footer>
   )
