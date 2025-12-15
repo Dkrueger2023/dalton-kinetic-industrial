@@ -10,7 +10,7 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover object-left md:object-center"
       />
 
-      <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-b md:from-gray-900/70 md:via-gray-800/40 md:to-gray-900/20" />
+      <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-b md:from-gray-900/10 md:via-transparent md:to-transparent" />
 
       {/* Navigation - positioned over hero background */}
       <Navbar />
