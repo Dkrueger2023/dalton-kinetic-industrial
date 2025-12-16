@@ -16,10 +16,10 @@ export function HeroSection() {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-2 lg:px-8 lg:pt-0 flex-1 flex items-center">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           {/* LEFT ELEMENT - Heading */}
-          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
+          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 p-2 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
               style={{ color: "#ffffff" }}

@@ -5,7 +5,7 @@ import Image from "next/image"
 export function Navbar() {
   return (
     <nav className="relative w-full z-50 bg-transparent border-b border-white/20">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-1 lg:pt-2 lg:pb-3 flex items-center justify-between lg:justify-start lg:relative">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-0.5 lg:pt-2 lg:pb-3 flex items-center justify-between lg:justify-start lg:relative">
         <div className="flex items-center justify-center flex-1 md:flex-initial md:justify-start lg:flex-initial">
           <a href="/" className="cursor-pointer">
             <img
