@@ -19,9 +19,9 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-center">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           {/* LEFT ELEMENT - Heading */}
-          <div className="w-full lg:w-[60%] flex items-center bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
+          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)]"
+              className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
               style={{ color: "#ffffff" }}
             >
               INTEGRITY.
@@ -38,12 +38,16 @@ export function HeroSection() {
 
           {/* RIGHT ELEMENT - Body Text */}
           <div className="w-full lg:w-[40%] bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-2 md:border-[#d81e1f] text-white">
-            <p className="text-justify text-base md:text-lg text-white font-[var(--font-helvetica)] tracking-wide leading-relaxed">
-              Kinetic Industrial is a top tier industrial contractor offering specialized construction services to a
-              broad range of energy, infrastructure, utility, and power generation customers. We deliver reliable
-              industrial infrastructure solutions across the United States, specializing in oil & gas, electrical, water
-              and other critical systems to support the nation's most essential systems.
-            </p>
+            <div className="text-center md:text-justify text-sm md:text-lg text-white font-[var(--font-helvetica)] tracking-wide leading-relaxed space-y-4">
+              <p>
+                Kinetic Industrial is a top tier industrial contractor offering specialized construction services to a
+                broad range of energy, infrastructure, utility, and power generation customers.
+              </p>
+              <p>
+                We deliver reliable industrial infrastructure solutions across the United States, specializing in oil &
+                gas, electrical, water and other critical systems to support the nation's most essential systems.
+              </p>
+            </div>
           </div>
         </div>
       </div>
