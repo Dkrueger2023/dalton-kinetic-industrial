@@ -16,12 +16,12 @@ export function HeroSection() {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-start pt-16 md:items-center md:pt-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-start justify-center py-12 md:items-center md:pt-0 md:py-0">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           {/* LEFT ELEMENT - Heading */}
           <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
+              className="text-3xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
               style={{ color: "#ffffff" }}
             >
               INTEGRITY.
