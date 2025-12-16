@@ -16,10 +16,10 @@ export function HeroSection() {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-start pt-16 md:items-center md:pt-0">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           {/* LEFT ELEMENT - Heading */}
-          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
+          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f]">
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
               style={{ color: "#ffffff" }}
@@ -44,8 +44,9 @@ export function HeroSection() {
                 broad range of energy, infrastructure, utility, and power generation customers.
               </p>
               <p>
-                We deliver reliable industrial infrastructure solutions across the United States, specializing in oil &
-                gas, electrical, water and other critical systems to support the nation's most essential systems.
+                We deliver reliable industrial infrastructure solutions across the United States, specializing in oil
+                &amp; gas, electrical, water and other critical systems to support the nation&apos;s most essential
+                systems.
               </p>
             </div>
           </div>
