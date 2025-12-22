@@ -20,8 +20,7 @@ export function GeographicalReachSection() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">GEOGRAPHICAL REACH</h2>
             <p className="text-lg text-white/90 mb-8 text-pretty font-[var(--font-sans)]">
-              Our operations are managed from three central Oklahoma locations—yards in Woodward, OK and Amber, OK, and
-              our HQ in Norman, OK. This positioning allows us to effectively serve the entire region, including:
+              Our operations span four locations across the midwest and north: our HQ in Norman, OK, our Oklahoma yards in Woodward and Amber, and our North Dakota location in Williston. This positioning allows us to effectively serve the entire region, including:
             </p>
             <div className="flex flex-row gap-24">
               <ul className="text-white font-[var(--font-sans)] lg:items-start">
@@ -40,7 +39,7 @@ export function GeographicalReachSection() {
           {/* Map Image */}
           <div className="order-1 lg:order-2">
             <img
-              src="/images/reach-updated.webp"
+              src="/images/kinetic-reach-website-rev1-20-281-29.webp"
               alt="Kinetic Industrial Service Area Map showing Oklahoma, Texas, New Mexico, Colorado, Kansas, Missouri, Arkansas, and Louisiana"
               className="w-full h-auto rounded-lg"
             />
