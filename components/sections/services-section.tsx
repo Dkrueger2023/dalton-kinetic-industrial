@@ -8,7 +8,7 @@ const services = [
   { title: "Facilities", image: "/facilities.webp" }, // Updated FACILITIES image path to use new facilities.webp file
   { title: "Civil", image: "/dirt-work.webp" },
   { title: "ROW", image: "/row-access.webp" }, // Updated ROW image to use new row-access.webp file showing cleared utility corridor with access path
-  { title: "Fabrication", image: "/fabrication.webp" },
+  { title: "Fabrication", image: "/fabrication-kinetic.webp" }, // Updated Fabrication image to use new welding sparks photo
   { title: "Technical Services", image: "/pigging-pipeline.webp" },
 ]
 
