@@ -1,14 +1,90 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Navbar } from "./navbar"
 
+const slides = [
+  {
+    image: "/hero-image-kinetic.webp",
+    alt: "Pipeline Construction Site",
+  },
+  {
+    image: "/images/weldingimagehero-kinetic.webp",
+    alt: "Industrial Welding Team",
+  },
+  {
+    image: "/images/weldingheroimage-kinetic.webp",
+    alt: "Precision Welding Work",
+  },
+]
+
 export function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [progress, setProgress] = useState(0)
+
+  const { scrollY } = useScroll()
+  const scale = useTransform(scrollY, [0, 500], [1, 1.1])
+  const brightness = useTransform(scrollY, [0, 500], [1, 0.6])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setCurrentSlide((current) => (current + 1) % slides.length)
+          return 0
+        }
+        return prev + 100 / 80 // 100% over 8 seconds
+      })
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+    setProgress(0)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((current) => (current + 1) % slides.length)
+    setProgress(0)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((current) => (current - 1 + slides.length) % slides.length)
+    setProgress(0)
+  }
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="/hero-image-kinetic.webp"
-        alt="Pipeline Construction Site"
-        className="absolute inset-0 w-full h-full object-cover object-left md:object-center"
-      />
+      <div className="absolute inset-0">
+        <AnimatePresence mode="sync">
+          {slides.map((slide, index) =>
+            index === currentSlide ? (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+                className="absolute inset-0"
+              >
+                <motion.img
+                  src={slide.image}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover object-center"
+                  style={{
+                    scale: scale,
+                    filter: `brightness(${brightness})`,
+                  }}
+                />
+              </motion.div>
+            ) : null,
+          )}
+        </AnimatePresence>
+      </div>
 
       <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-b md:from-gray-900/10 md:via-transparent md:to-transparent" />
 
@@ -18,8 +94,13 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-start justify-center py-12 md:items-center md:pt-0 md:py-0">
         <div className="flex flex-col lg:flex-row w-full h-auto">
-          {/* LEFT ELEMENT - Heading */}
-          <div className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f] pb-8 md:pb-0">
+          <motion.div
+            key={`heading-${currentSlide}`}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="w-full lg:w-[60%] flex items-center justify-center md:justify-start bg-transparent md:bg-black/40 md:p-8 lg:p-12 md:lg:border-l-8 md:border-[#d81e1f] pb-8 md:pb-0"
+          >
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance uppercase tracking-wide font-[var(--font-impact)] text-center md:text-left"
               style={{ color: "#ffffff" }}
@@ -30,14 +111,19 @@ export function HeroSection() {
               <br />
               COMMITMENT.
             </h1>
-          </div>
+          </motion.div>
 
           <div className="lg:hidden bg-transparent px-4">
             <hr className="w-full max-w-md h-1 bg-[#d81e1f] rounded-full border-none" />
           </div>
 
-          {/* RIGHT ELEMENT - Body Text */}
-          <div className="w-full lg:w-[40%] bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-2 md:border-[#d81e1f] text-white">
+          <motion.div
+            key={`body-${currentSlide}`}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            className="w-full lg:w-[40%] bg-transparent md:bg-black/40 p-4 md:p-8 lg:p-12 md:lg:border-l-2 md:border-[#d81e1f] text-white"
+          >
             <div className="text-center md:text-justify text-base md:text-lg text-white font-[var(--font-helvetica)] tracking-wide leading-relaxed space-y-4">
               <p>
                 Kinetic Industrial is a top tier industrial contractor offering specialized construction services to a
@@ -49,8 +135,48 @@ export function HeroSection() {
                 systems.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
+      </div>
+
+      <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20">
+        <button
+          onClick={prevSlide}
+          className="p-3 rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+      </div>
+      <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20">
+        <button
+          onClick={nextSlide}
+          className="p-3 rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 z-20 h-1 bg-white/20 backdrop-blur-sm">
+        <motion.div
+          className="h-full bg-[#d81e1f]"
+          style={{ width: `${progress}%` }}
+          transition={{ duration: 0.1, ease: "linear" }}
+        />
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? "bg-[#d81e1f] scale-125" : "bg-white/50 hover:bg-white/80"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   )

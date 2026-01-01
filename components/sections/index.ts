@@ -1,6 +1,7 @@
-export { HeroSection } from "./hero-section";
-export { AboutSection } from "./about-section";
-export { ServicesSection } from "./services-section";
-export { IndustriesSection } from "./industries-section";
-export { GeographicalReachSection } from "./geographical-reach-section";
-export { Footer } from "./footer";
+export { Navbar } from "./navbar"
+export { HeroSection } from "./hero-section"
+export { AboutSection } from "./about-section"
+export { ServicesSection } from "./services-section"
+export { IndustriesSection } from "./industries-section"
+export { GeographicalReachSection } from "./geographical-reach-section"
+export { Footer } from "./footer"
