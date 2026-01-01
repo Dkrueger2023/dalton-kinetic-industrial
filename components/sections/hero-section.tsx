@@ -75,11 +75,9 @@ export function HeroSection() {
       {/* Navigation - positioned over hero background */}
       <Navbar />
 
-      {/* Hero Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex items-start justify-center py-12 md:items-center md:pt-0 md:py-0">
         <div className="flex flex-col lg:flex-row w-full h-auto">
           <motion.div
-            key={`heading-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -102,7 +100,6 @@ export function HeroSection() {
           </div>
 
           <motion.div
-            key={`body-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
