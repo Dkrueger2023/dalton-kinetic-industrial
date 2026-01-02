@@ -34,7 +34,7 @@ export function HeroSection() {
           setCurrentSlide((current) => (current + 1) % slides.length)
           return 0
         }
-        return prev + 100 / 80 // 100% over 8 seconds
+        return prev + 100 / 40 // 100% over 4 seconds (was 80 for 8 seconds)
       })
     }, 100)
 
