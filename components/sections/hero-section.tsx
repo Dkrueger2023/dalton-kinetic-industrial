@@ -14,8 +14,8 @@ const slides = [
     alt: "Industrial Welding Team",
   },
   {
-    image: "/images/weldingheroimage-kinetic.webp",
-    alt: "Precision Welding Work",
+    image: "/images/kinetic-hero-t.webp",
+    alt: "Molten Metal Industrial Process",
   },
 ]
 
