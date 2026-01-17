@@ -6,12 +6,28 @@ import { Navbar } from "./navbar"
 
 const slides = [
   {
+    image: "/images/initial-kinetic-website-hero.webp",
+    alt: "Pipeline Construction Stretching to Horizon",
+  },
+  {
     image: "/hero-image-kinetic.webp",
     alt: "Pipeline Construction Site",
   },
   {
+    image: "/images/kinetic-website-hero-welding.webp",
+    alt: "Pipeline Welder at Work",
+  },
+  {
     image: "/images/weldingimagehero-kinetic.webp",
     alt: "Industrial Welding Team",
+  },
+  {
+    image: "/images/hero-3-kinetic.webp",
+    alt: "Pipeline in Desert Landscape",
+  },
+  {
+    image: "/images/6-kinetic-website-hero.webp",
+    alt: "Industrial Site Panoramic View",
   },
   {
     image: "/images/kinetic-hero-t.webp",
