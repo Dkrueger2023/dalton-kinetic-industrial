@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import { useState, useEffect, useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { Navbar } from "./navbar"
+import Image from "next/image"
 
 const slides = [
   {
@@ -38,10 +39,26 @@ const slides = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [progress, setProgress] = useState(0)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+  const loadedCount = useRef(0)
 
   const { scrollY } = useScroll()
   const scale = useTransform(scrollY, [0, 500], [1, 1.1])
   const brightness = useTransform(scrollY, [0, 500], [1, 0.6])
+
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new window.Image()
+      img.crossOrigin = "anonymous"
+      img.src = slide.image
+      img.onload = () => {
+        loadedCount.current += 1
+        if (loadedCount.current >= slides.length) {
+          setImagesLoaded(true)
+        }
+      }
+    })
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +67,7 @@ export function HeroSection() {
           setCurrentSlide((current) => (current + 1) % slides.length)
           return 0
         }
-        return prev + 100 / 40 // 100% over 4 seconds (was 80 for 8 seconds)
+        return prev + 100 / 40
       })
     }, 100)
 
@@ -58,35 +75,52 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-black">
       <div className="absolute inset-0">
-        <AnimatePresence mode="sync">
-          {slides.map((slide, index) =>
-            index === currentSlide ? (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="absolute inset-0"
-              >
-                <motion.img
-                  src={slide.image}
-                  alt={slide.alt}
-                  className="w-full h-full object-cover object-center"
-                  style={{
-                    scale: scale,
-                    filter: `brightness(${brightness})`,
-                  }}
-                />
-              </motion.div>
-            ) : null,
-          )}
-        </AnimatePresence>
+        {slides.map((slide, index) => (
+          <motion.div
+            key={slide.image}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: index === currentSlide ? 1 : 0,
+              zIndex: index === currentSlide ? 1 : 0,
+            }}
+            transition={{
+              opacity: { duration: 1.2, ease: "easeInOut" },
+              zIndex: { delay: index === currentSlide ? 0 : 1.2 },
+            }}
+          >
+            <motion.div
+              className="w-full h-full"
+              style={{
+                scale: scale,
+              }}
+            >
+              <Image
+                src={slide.image || "/placeholder.svg"}
+                alt={slide.alt}
+                fill
+                priority={index < 2}
+                className="object-cover object-center"
+                style={{
+                  filter: `brightness(${brightness.get()})`,
+                }}
+                sizes="100vw"
+              />
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
 
-      <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-b md:from-gray-900/10 md:via-transparent md:to-transparent" />
+      <motion.div
+        className="absolute inset-0 bg-black pointer-events-none z-[2]"
+        style={{
+          opacity: useTransform(scrollY, [0, 500], [0, 0.4]),
+        }}
+      />
+
+      <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-b md:from-gray-900/10 md:via-transparent md:to-transparent z-[3]" />
 
       {/* Navigation - positioned over hero background */}
       <Navbar />
