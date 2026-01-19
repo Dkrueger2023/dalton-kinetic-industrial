@@ -9,30 +9,44 @@ const slides = [
   {
     image: "/images/initial-kinetic-website-hero.webp",
     alt: "Pipeline Construction Stretching to Horizon",
+    mobilePosition: "center 60%", // Focus on pipeline in lower portion
+    desktopPosition: "center center",
   },
   {
     image: "/hero-image-kinetic.webp",
     alt: "Pipeline Construction Site",
+    mobilePosition: "center 40%", // Show more of the construction equipment
+    desktopPosition: "center center",
   },
   {
     image: "/images/kinetic-website-hero-welding.webp",
     alt: "Pipeline Welder at Work",
+    mobilePosition: "center 30%", // Focus on the welder (subject is upper portion)
+    desktopPosition: "center center",
   },
   {
     image: "/images/weldingimagehero-kinetic.webp",
     alt: "Industrial Welding Team",
+    mobilePosition: "40% center", // Welder is on left side of image
+    desktopPosition: "center center",
   },
   {
     image: "/images/hero-3-kinetic.webp",
     alt: "Pipeline in Desert Landscape",
+    mobilePosition: "center 70%", // Pipeline is in lower portion
+    desktopPosition: "center center",
   },
   {
     image: "/images/6-kinetic-website-hero.webp",
     alt: "Industrial Site Panoramic View",
+    mobilePosition: "70% 60%", // Site is on right side of image
+    desktopPosition: "center center",
   },
   {
     image: "/images/kinetic-hero-t.webp",
     alt: "Molten Metal Industrial Process",
+    mobilePosition: "40% center", // Molten metal glow is on left
+    desktopPosition: "center center",
   },
 ]
 
@@ -97,17 +111,34 @@ export function HeroSection() {
                 scale: scale,
               }}
             >
-              <Image
-                src={slide.image || "/placeholder.svg"}
-                alt={slide.alt}
-                fill
-                priority={index < 2}
-                className="object-cover object-center"
-                style={{
-                  filter: `brightness(${brightness.get()})`,
-                }}
-                sizes="100vw"
-              />
+              <div className="relative w-full h-full">
+                {/* Mobile Image */}
+                <Image
+                  src={slide.image || "/placeholder.svg"}
+                  alt={slide.alt}
+                  fill
+                  priority={index < 2}
+                  className="object-cover md:hidden"
+                  style={{
+                    filter: `brightness(${brightness.get()})`,
+                    objectPosition: slide.mobilePosition,
+                  }}
+                  sizes="100vw"
+                />
+                {/* Desktop Image */}
+                <Image
+                  src={slide.image || "/placeholder.svg"}
+                  alt={slide.alt}
+                  fill
+                  priority={index < 2}
+                  className="object-cover hidden md:block"
+                  style={{
+                    filter: `brightness(${brightness.get()})`,
+                    objectPosition: slide.desktopPosition,
+                  }}
+                  sizes="100vw"
+                />
+              </div>
             </motion.div>
           </motion.div>
         ))}
