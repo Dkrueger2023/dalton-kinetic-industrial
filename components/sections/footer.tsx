@@ -26,7 +26,7 @@ export function Footer() {
         <div className="border-t border-border mb-8" />
 
         <div className="flex justify-center items-center gap-2 text-center text-sm text-muted-foreground">
-          <span>© 2025 Kinetic Industrial. All rights reserved.</span>
+          <span>© 2026 Kinetic Industrial. All rights reserved.</span>
           <Image
             src="/american-flag.webp"
             alt="American Flag"
