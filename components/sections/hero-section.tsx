@@ -48,6 +48,12 @@ const slides = [
     mobilePosition: "40% center", // Molten metal glow is on left
     desktopPosition: "center center",
   },
+  {
+    image: "/images/excavator-kinetic.webp",
+    alt: "Excavator Working on Pipeline Trench",
+    mobilePosition: "center 40%", // Focus on the excavator in upper-center
+    desktopPosition: "center center",
+  },
 ]
 
 export function HeroSection() {
