@@ -19,8 +19,8 @@ export function Navbar() {
           Apply
         </a>
 
-        {/* Logo: Absolutely centered on mobile, left-aligned on lg+ */}
-        <div className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0">
+        {/* Logo: Absolutely centered on mobile, flex left-aligned on lg+ */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 lg:relative lg:left-auto lg:transform-none lg:translate-x-0 lg:flex lg:items-center lg:justify-start">
           <a href="/" className="cursor-pointer">
             <img
               src="/kinetic-white-logo.webp"
