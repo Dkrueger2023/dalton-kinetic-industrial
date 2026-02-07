@@ -8,19 +8,21 @@ const APPLY_URL =
 export function Navbar() {
   return (
     <nav className="relative w-full z-50 bg-transparent border-b border-white/20">
-      <div className="relative container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-0.5 lg:pt-2 lg:pb-3 flex items-center justify-between">
-        {/* Mobile: Apply button (far left) | Hidden on lg+ */}
-        <a
-          href={APPLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex lg:hidden items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm bg-transparent text-white border border-white/70 hover:bg-white/10 transition-all duration-300 ease-in-out z-10"
-        >
-          Apply
-        </a>
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-0.5 lg:pt-2 lg:pb-3 flex items-center justify-between">
+        {/* Left side: Apply button - Takes equal space on mobile */}
+        <div className="flex-1 flex justify-start lg:flex-none">
+          <a
+            href={APPLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex lg:hidden items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm bg-transparent text-white border border-white/70 hover:bg-white/10 transition-all duration-300 ease-in-out"
+          >
+            Apply
+          </a>
+        </div>
 
-        {/* Logo: Absolutely centered on mobile, flex left-aligned on lg+ */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 lg:relative lg:left-auto lg:transform-none lg:translate-x-0 lg:flex lg:items-center lg:justify-start">
+        {/* Center: Logo - Natural size, centered by balanced flex-1 sides */}
+        <div className="flex items-center justify-center lg:flex-1 lg:justify-start">
           <a href="/" className="cursor-pointer">
             <img
               src="/kinetic-white-logo.webp"
@@ -30,8 +32,8 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Right group: Flag on mobile | Apply Here + Flag on lg+ */}
-        <div className="flex items-center gap-4 z-10 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-12">
+        {/* Right side: Flag - Takes equal space on mobile | Apply Here + Flag on lg+ */}
+        <div className="flex-1 flex items-center justify-end gap-4 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-12">
           {/* Desktop Apply Here button */}
           <a
             href={APPLY_URL}
