@@ -16,7 +16,15 @@ export function Navbar() {
           </a>
         </div>
 
-        <div className="absolute right-6 md:relative md:right-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-12">
+        <div className="absolute right-6 md:relative md:right-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-12 flex items-center gap-4">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfWsBM81-69MeqhtKNsQvV74GB2_CgIovT_vyj0Y8DiB4MJxQ/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center justify-center px-5 py-2 text-sm font-bold uppercase tracking-wider rounded-sm bg-white text-[#d81e1f] border border-white hover:bg-[#d81e1f] hover:text-white hover:border-[#d81e1f] hover:shadow-lg transition-all duration-300 ease-in-out"
+          >
+            Apply Here
+          </a>
           <Image
             src="/american-flag.webp"
             alt="American Flag"
