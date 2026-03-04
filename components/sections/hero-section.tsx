@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Navbar } from "./navbar"
 import Image from "next/image"
@@ -9,74 +9,75 @@ const slides = [
   {
     image: "/images/initial-kinetic-website-hero.webp",
     alt: "Pipeline Construction Stretching to Horizon",
-    mobilePosition: "center 60%", // Focus on pipeline in lower portion
+    mobilePosition: "center 60%",
     desktopPosition: "center center",
   },
   {
     image: "/hero-image-kinetic.webp",
     alt: "Pipeline Construction Site",
-    mobilePosition: "center 40%", // Show more of the construction equipment
+    mobilePosition: "center 40%",
     desktopPosition: "center center",
   },
   {
     image: "/images/kinetic-website-hero-welding.webp",
     alt: "Pipeline Welder at Work",
-    mobilePosition: "center 30%", // Focus on the welder (subject is upper portion)
+    mobilePosition: "center 30%",
     desktopPosition: "center center",
   },
   {
     image: "/images/weldingimagehero-kinetic.webp",
     alt: "Industrial Welding Team",
-    mobilePosition: "40% center", // Welder is on left side of image
+    mobilePosition: "40% center",
     desktopPosition: "center center",
   },
   {
     image: "/images/hero-3-kinetic.webp",
     alt: "Pipeline in Desert Landscape",
-    mobilePosition: "center 70%", // Pipeline is in lower portion
+    mobilePosition: "center 70%",
     desktopPosition: "center center",
   },
   {
     image: "/images/6-kinetic-website-hero.webp",
     alt: "Industrial Site Panoramic View",
-    mobilePosition: "70% 60%", // Site is on right side of image
+    mobilePosition: "70% 60%",
     desktopPosition: "center center",
   },
   {
     image: "/images/kinetic-hero-t.webp",
     alt: "Molten Metal Industrial Process",
-    mobilePosition: "40% center", // Molten metal glow is on left
+    mobilePosition: "40% center",
     desktopPosition: "center center",
   },
   {
     image: "/images/excavator-kinetic.webp",
     alt: "Excavator Working on Pipeline Trench",
-    mobilePosition: "center 40%", // Focus on the excavator in upper-center
+    mobilePosition: "center 40%",
     desktopPosition: "center center",
   },
 ]
 
+/* Intrinsic dimensions for CLS prevention (all hero images are 1920x1080) */
+const IMG_WIDTH = 1920
+const IMG_HEIGHT = 1080
+
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [progress, setProgress] = useState(0)
-  const [imagesLoaded, setImagesLoaded] = useState(false)
-  const loadedCount = useRef(0)
+  /* Track which slides have been visited so we only mount them on demand */
+  const [mountedSlides, setMountedSlides] = useState<Set<number>>(() => new Set([0]))
 
   const { scrollY } = useScroll()
   const scale = useTransform(scrollY, [0, 500], [1, 1.1])
   const brightness = useTransform(scrollY, [0, 500], [1, 0.6])
 
-  useEffect(() => {
-    slides.forEach((slide) => {
-      const img = new window.Image()
-      img.crossOrigin = "anonymous"
-      img.src = slide.image
-      img.onload = () => {
-        loadedCount.current += 1
-        if (loadedCount.current >= slides.length) {
-          setImagesLoaded(true)
-        }
-      }
+  /* Pre-load the NEXT slide ~1 s before the transition fires */
+  const prefetchNext = useCallback((current: number) => {
+    const next = (current + 1) % slides.length
+    setMountedSlides((prev) => {
+      if (prev.has(next)) return prev
+      const copy = new Set(prev)
+      copy.add(next)
+      return copy
     })
   }, [])
 
@@ -84,70 +85,91 @@ export function HeroSection() {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          setCurrentSlide((current) => (current + 1) % slides.length)
+          setCurrentSlide((current) => {
+            const next = (current + 1) % slides.length
+            return next
+          })
           return 0
+        }
+        /* When we hit ~75 %, pre-mount and lazy-load the next slide */
+        if (prev >= 75 && prev < 75 + 100 / 40) {
+          prefetchNext(currentSlide)
         }
         return prev + 100 / 40
       })
     }, 100)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [currentSlide, prefetchNext])
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-black">
       <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <motion.div
-            key={slide.image}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: index === currentSlide ? 1 : 0,
-              zIndex: index === currentSlide ? 1 : 0,
-            }}
-            transition={{
-              opacity: { duration: 1.2, ease: "easeInOut" },
-              zIndex: { delay: index === currentSlide ? 0 : 1.2 },
-            }}
-          >
+        {slides.map((slide, index) => {
+          const isFirst = index === 0
+          const isActive = index === currentSlide
+          const shouldMount = isFirst || mountedSlides.has(index)
+
+          if (!shouldMount) return null
+
+          return (
             <motion.div
-              className="w-full h-full"
-              style={{
-                scale: scale,
+              key={slide.image}
+              className="absolute inset-0"
+              initial={{ opacity: isFirst ? 1 : 0 }}
+              animate={{
+                opacity: isActive ? 1 : 0,
+                zIndex: isActive ? 1 : 0,
+              }}
+              transition={{
+                opacity: { duration: 1.2, ease: "easeInOut" },
+                zIndex: { delay: isActive ? 0 : 1.2 },
               }}
             >
-              <div className="relative w-full h-full">
-                {/* Mobile Image */}
-                <Image
-                  src={slide.image || "/placeholder.svg"}
-                  alt={slide.alt}
-                  fill
-                  priority={index < 2}
-                  className="object-cover md:hidden"
-                  style={{
-                    filter: `brightness(${brightness.get()})`,
-                    objectPosition: slide.mobilePosition,
-                  }}
-                  sizes="100vw"
-                />
-                {/* Desktop Image */}
-                <Image
-                  src={slide.image || "/placeholder.svg"}
-                  alt={slide.alt}
-                  fill
-                  priority={index < 2}
-                  className="object-cover hidden md:block"
-                  style={{
-                    filter: `brightness(${brightness.get()})`,
-                    objectPosition: slide.desktopPosition,
-                  }}
-                  sizes="100vw"
-                />
-              </div>
+              <motion.div
+                className="w-full h-full"
+                style={{ scale }}
+              >
+                <div className="relative w-full h-full">
+                  {/* Mobile Image */}
+                  <Image
+                    src={slide.image}
+                    alt={slide.alt}
+                    fill
+                    width={IMG_WIDTH}
+                    height={IMG_HEIGHT}
+                    priority={isFirst}
+                    loading={isFirst ? "eager" : "lazy"}
+                    fetchPriority={isFirst ? "high" : "low"}
+                    className="object-cover md:hidden"
+                    style={{
+                      filter: `brightness(${brightness.get()})`,
+                      objectPosition: slide.mobilePosition,
+                    }}
+                    sizes="(max-width: 768px) 100vw, 0px"
+                  />
+                  {/* Desktop Image */}
+                  <Image
+                    src={slide.image}
+                    alt={slide.alt}
+                    fill
+                    width={IMG_WIDTH}
+                    height={IMG_HEIGHT}
+                    priority={isFirst}
+                    loading={isFirst ? "eager" : "lazy"}
+                    fetchPriority={isFirst ? "high" : "low"}
+                    className="object-cover hidden md:block"
+                    style={{
+                      filter: `brightness(${brightness.get()})`,
+                      objectPosition: slide.desktopPosition,
+                    }}
+                    sizes="(max-width: 768px) 0px, 100vw"
+                  />
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        ))}
+          )
+        })}
       </div>
 
       <motion.div
