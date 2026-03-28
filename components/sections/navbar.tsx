@@ -3,7 +3,7 @@ import { ContactFormModal } from "@/components/ContactFormModal"
 import Image from "next/image"
 
 const APPLY_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfWsBM81-69MeqhtKNsQvV74GB2_CgIovT_vyj0Y8DiB4MJxQ/viewform?usp=dialog"
+  "https://us.makeforms.co/yiz2rbf/"
 
 export function Navbar() {
   return (
