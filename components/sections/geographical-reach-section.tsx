@@ -20,7 +20,7 @@ export function GeographicalReachSection() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <h2 className="text-4xl font-black text-white mb-6 font-[var(--font-impact)]">GEOGRAPHICAL REACH</h2>
             <p className="text-lg text-white/90 mb-8 text-pretty font-[var(--font-sans)]">
-              Our operations span three locations across Oklahoma: our HQ in Norman, OK, our yards in Woodward and Amber. This positioning allows us to effectively serve the entire region, including:
+              Our operations span three locations across Oklahoma: our HQ in Norman, OK, and our yards in Woodward and Amber. This positioning allows us to effectively serve the entire region, including:
             </p>
             <div className="flex flex-row gap-24">
               <ul className="text-white font-[var(--font-sans)] lg:items-start">
